@@ -6,8 +6,8 @@ from flightspage.flights import pages
 
 app = Flask(__name__)
 
-app.register_blueprint(pages, url_prefix="/home")
-app.register_blueprint(pages, url_prefix="/flights")
+app.register_blueprint(pages,name='home1', url_prefix="/home")
+app.register_blueprint(pages, name='flight1', url_prefix="/flights")
 @app.route("/")
 def home():
     return render_template("index.html")
