@@ -1,0 +1,90 @@
+{%extends "base.html"%}
+{%block title%} Home{%endblock%}
+{%block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/baseStyle.css') }}">
+
+<image id="bannerimage" src="{{ url_for('static', filename='images/banner.png') }}"></image>
+<h1>
+
+  <span class="titleName"> Aggies Airlines</span>
+  <span class="descriptionBox"> Welcome to Aggie Airlines. We provide fast and comfortable flights. Start booking
+    now</span>
+  <div class="flightSearchBox">
+    <h2>Flight Booking</h2>
+    <form>
+      <table>
+        <tr>
+          <td>
+            One Way
+          </td>
+          <td>
+            <input id="roundTripOption" name="roundTripOption" type="radio">
+          </td>
+          <td>
+            Round Trip
+          </td>
+          <td>
+            <input id="roundTripOption" name="roundTripOption" type="radio">
+          </td>
+        </tr>
+      </table>
+      <table>
+
+        <tr>
+          <td>
+            From
+          </td>
+          <td>
+            <input type="text" title="to" placeholder="From" />
+          </td>
+          <td>
+            To
+          </td>
+          <td>
+            <input type="text" title="to" placeholder="To" />
+          </td>
+        <tr>
+
+          <td>
+            Depart
+          </td>
+          <td>
+            <input type="date" title="from" placeholder="Start Date" />
+          </td>
+          <div id="returnOption">
+            <td>
+              Return
+            </td>
+            <td>
+              <input type="date" title="to" placeholder="End Date" />
+            </td>
+          </div>
+        </tr>
+
+
+      </table>
+      <button type="submit" class="btn">Search Flight</button>
+    </form>
+  </div>
+  <!--end log form -->
+
+</h1>
+<script>
+  var returnField = document.getElementById("returnOption");
+  var roundTripOptions = document.getElementsByName("roundTripOption");
+  console.log(roundTripOptions.length)
+  function ToggleReturn() {
+  
+    if (roundTripOptions[0].checked) {
+      console.log("visible");
+      returnField.style.visibility = "visible";
+      return
+    }
+    console.log("hidden");
+    returnField.style.visibility = "hidden";
+  }
+  roundTripOptions[0].addEventListener('change', ToggleReturn);
+  roundTripOptions[1].addEventListener('change', ToggleReturn);
+</script>
+
+{%endblock%}

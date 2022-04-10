@@ -20,7 +20,6 @@ class users(db.Model):
         self.email = email
         
 
-
 @app.route("/")
 def home():
     return render_template("index.html")

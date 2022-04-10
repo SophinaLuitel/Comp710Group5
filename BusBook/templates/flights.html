@@ -1,0 +1,127 @@
+{%extends "base.html"%}
+{%block title%} Home{%endblock%}
+{%block content%}
+<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='styles/flights.css') }}">
+  <image src="{{ url_for('static', filename='images/banner.png') }}"></image>
+    <h1>
+        
+      
+        <div class="flightResultBox">
+            <h2>Flight Schedule Results</h2>
+            <image class = "schedule" src="{{ url_for('static', filename='images/flightSchedule.png') }}"></image>
+            <form>
+  <!---
+<table>
+  <tr>
+   
+    <th>To</th>
+    <th>From</th>
+    <th>Depart</th>
+    <th>Remaining Seats</th>
+  </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      7:00am
+    </td>
+    <td>
+      90
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+    </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      5:00am
+    </td>
+    <td>
+      121
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+    </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      2:00pm
+    </td>
+    <td>
+      67
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+    </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      6:00pm
+    </td>
+    <td>
+      20
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+    </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      8:00pm
+    </td>
+    <td>
+      12
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+    </tr>
+    <td>
+      Florida
+    </td>
+    <td>
+      Georgia
+    </td>
+    <td>
+      11:00pm
+    </td>
+    <td>
+      12
+    </td>
+    <td>
+      <button type="submit" class="btn">Reserve</button>
+    </td>
+	</tr>
+    
+
+    
+</table>
+
+            </form>
+          </div><!--end log form -->
+    </h1>
+
+{%endblock%}
